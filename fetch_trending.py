@@ -48,18 +48,19 @@ REGION_GROUPS = [
     {"key": "JP", "label": "🇯🇵 일본", "region_codes": ["JP"]},
     {"key": "HK_TW", "label": "🇭🇰🇹🇼 홍콩·대만", "region_codes": ["HK", "TW"]},
 ]
-MAX_DURATION_SEC = 60      # 진짜 "쇼츠" 기준: 1분 이하만
+MAX_DURATION_SEC = 60      # 진짜 "쇼츠" 기준: 1분 이하만 (그대로 유지)
 SEARCH_PAGES_PER_REGION = 2   # 지역 코드 1개당 search.list 최대 페이지(=최대 100개) 후보 수집
-SEARCH_LOOKBACK_DAYS = 4      # 최근 며칠 이내 업로드된 영상 중에서 찾을지
+SEARCH_LOOKBACK_DAYS = 2      # 최근 며칠 이내 업로드된 영상 중에서 찾을지 (4일 -> 2일로 좁힘)
 TOP_N_PER_GROUP = 10       # 카테고리 x 국가그룹 별로 몇 개씩 남길지
 SHORTS_CHECK_DELAY_SEC = 0.1  # 유튜브에 너무 빠르게 연타하지 않도록 살짝 텀
 
-# YouTube 공식 videoCategoryId 기반 3분류 매핑
+# YouTube 공식 videoCategoryId 기반 분류 매핑
+# "영화" 카테고리는 제거함(수집 자체를 안 함) - CATEGORY_DEFS에서 빠졌고,
+# filter_real_shorts()에서 category가 show/viral이 아니면 검증 단계 가기 전에 버림.
 FILM_CATEGORY_IDS = {"1", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "44"}
 ENTERTAINMENT_CATEGORY_IDS = {"24", "43"}
 
 CATEGORY_DEFS = [
-    {"key": "film", "label": "🎬 영화"},
     {"key": "show", "label": "🎤 예능"},
     {"key": "viral", "label": "🔥 화제/이슈"},
 ]
@@ -147,8 +148,13 @@ def search_region_video_ids(region_code: str) -> list:
         params = {
             "part": "id",
             "type": "video",
+            "q": "#shorts",   # 진짜 원인: search.list는 q(검색어) 없이는 필터만으로 무조건 0개를
+                              # 반환한다(브라우저로 직접 검증함). order/publishedAfter 조합 문제가
+                              # 아니었음. q를 넣어야만 실제로 결과가 나옴.
             "videoDuration": "short",   # 유튜브 API 기준 4분 이하 (정확한 초 단위 필터는 아래에서 별도 적용)
-            "order": "viewCount",
+            "order": "viewCount",   # q가 있으면 order=viewCount + publishedAfter 조합도 정상 동작함
+                                     # (실측 확인). 조회수 높은 후보를 먼저 가져와야 페이지 수 제한
+                                     # (SEARCH_PAGES_PER_REGION) 안에서 좋은 후보를 더 많이 건짐.
             "regionCode": region_code,
             "publishedAfter": published_after,
             "maxResults": 50,
@@ -161,6 +167,9 @@ def search_region_video_ids(region_code: str) -> list:
         except Exception as e:
             print(f"[{region_code}] search API 호출 실패: {e}", file=sys.stderr)
             break
+
+        total_results = (data.get("pageInfo") or {}).get("totalResults")
+        print(f"[{region_code}] search 응답: totalResults={total_results}, items={len(data.get('items', []))}", file=sys.stderr)
 
         for item in data.get("items", []):
             vid = (item.get("id") or {}).get("videoId")
@@ -225,10 +234,13 @@ def to_video_record(item: dict) -> dict:
 
 
 def filter_real_shorts(items: list) -> list:
-    """길이 필터를 먼저 적용해 후보를 줄인 다음, 통과한 것만 실제 쇼츠인지 확인."""
+    """카테고리(영화 제외) + 길이 필터를 먼저 적용해 후보를 줄인 다음,
+    통과한 것만 실제 쇼츠인지 확인(제일 비싼 단계라 후보를 최대한 줄여놓고 들어감)."""
     records = []
     for item in items:
         rec = to_video_record(item)
+        if rec["category"] not in ("show", "viral"):   # 영화로 분류되면 검증 단계까지 안 감
+            continue
         if rec["duration_sec"] == 0 or rec["duration_sec"] > MAX_DURATION_SEC:
             continue
         records.append(rec)

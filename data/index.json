@@ -4,10 +4,6 @@
   ],
   "categories": [
     {
-      "key": "film",
-      "label": "🎬 영화"
-    },
-    {
       "key": "show",
       "label": "🎤 예능"
     },
