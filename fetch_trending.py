@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
 """
-매일 실행되는 유튜브 쇼츠 트렌드 수집 스크립트 (v2).
+매일 실행되는 유튜브 쇼츠 트렌드 수집 스크립트 (v3).
 
-바뀐 점 (v1 대비):
-  - "쇼츠" 판정을 훨씬 엄격하게: 1분(60초) 이하 + 실제 세로형(9:16) 쇼츠만 인정.
-    유튜브 mostPopular 차트에는 롱폼(예고편 등)도 섞여 있어서, 길이만 보고
-    거르면 "짧은 롱폼"이 섞여 들어온다. 그래서 후보 각각에 대해
-    https://www.youtube.com/shorts/<id> 요청을 날려서, 실제로 쇼츠 플레이어로
-    응답하는지(진짜 쇼츠) 아니면 /watch로 리다이렉트되는지(쇼츠 아님)를 확인한다.
+바뀐 점 (v2 대비):
+  - 후보 수집 방식을 chart=mostPopular 에서 search.list 기반으로 교체.
+    mostPopular 차트는 사실상 일반 롱폼(예고편/뮤비 등) 위주라 1분 이하로 거르면
+    후보가 통째로 0개가 되는 문제가 있었다 (실제로 v2 첫 실행에서 국가별로
+    후보 200~340개 중 1분 이하가 0개였음). search.list에 videoDuration=short
+    (4분 이하) + order=viewCount + publishedAfter=최근 N일 조건을 걸어서 "최근에
+    조회수 높은 짧은 영상"을 먼저 추리고, 거기서 다시 실제 영상 상세정보를
+    videos.list로 가져와 1분 이하 + 실제 쇼츠(9:16) 검증을 그대로 적용한다.
+  - "쇼츠" 판정: 1분(60초) 이하 + 실제 세로형(9:16) 쇼츠만 인정.
+    후보 각각에 대해 https://www.youtube.com/shorts/<id> 요청을 날려서, 실제로
+    쇼츠 플레이어로 응답하는지(진짜 쇼츠) 아니면 /watch로 리다이렉트되는지
+    (쇼츠 아님)를 확인한다.
   - 국가: 미국(US), 일본(JP), 홍콩+대만(HK, TW를 하나로 합쳐서 "홍콩·대만" 그룹으로 랭킹)
   - 카테고리별 x 국가(그룹)별로 각각 TOP 10을 따로 뽑는다.
   - 결과를 "날짜별 스냅샷" 파일로 계속 누적 저장한다 (덮어쓰지 않음).
@@ -43,7 +49,8 @@ REGION_GROUPS = [
     {"key": "HK_TW", "label": "🇭🇰🇹🇼 홍콩·대만", "region_codes": ["HK", "TW"]},
 ]
 MAX_DURATION_SEC = 60      # 진짜 "쇼츠" 기준: 1분 이하만
-PAGES_PER_REGION = 4       # 지역 코드 1개당 최대 4페이지(=최대 200개) 후보 수집
+SEARCH_PAGES_PER_REGION = 2   # 지역 코드 1개당 search.list 최대 페이지(=최대 100개) 후보 수집
+SEARCH_LOOKBACK_DAYS = 4      # 최근 며칠 이내 업로드된 영상 중에서 찾을지
 TOP_N_PER_GROUP = 10       # 카테고리 x 국가그룹 별로 몇 개씩 남길지
 SHORTS_CHECK_DELAY_SEC = 0.1  # 유튜브에 너무 빠르게 연타하지 않도록 살짝 텀
 
@@ -83,8 +90,8 @@ def parse_duration_seconds(iso_duration: str) -> int:
     return days * 86400 + hours * 3600 + minutes * 60 + seconds
 
 
-def api_get(params: dict) -> dict:
-    url = "https://www.googleapis.com/youtube/v3/videos?" + urllib.parse.urlencode(params)
+def api_get(endpoint: str, params: dict) -> dict:
+    url = f"https://www.googleapis.com/youtube/v3/{endpoint}?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"Accept": "application/json"})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
@@ -127,43 +134,74 @@ def is_real_vertical_short(video_id: str) -> bool:
             conn.close()
 
 
-def fetch_region_candidates(region_code: str) -> list:
-    candidates = []
+def search_region_video_ids(region_code: str) -> list:
+    """search.list로 최근 N일 이내 업로드된, 조회수 높은 '짧은'(4분 이하) 영상 후보를
+    모은다. mostPopular 차트는 사실상 롱폼 위주라 여기서는 쓰지 않는다."""
+    published_after = (
+        datetime.now(timezone.utc) - timedelta(days=SEARCH_LOOKBACK_DAYS)
+    ).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    ids = []
     page_token = None
-    for _ in range(PAGES_PER_REGION):
+    for _ in range(SEARCH_PAGES_PER_REGION):
         params = {
-            "part": "snippet,statistics,contentDetails",
-            "chart": "mostPopular",
+            "part": "id",
+            "type": "video",
+            "videoDuration": "short",   # 유튜브 API 기준 4분 이하 (정확한 초 단위 필터는 아래에서 별도 적용)
+            "order": "viewCount",
             "regionCode": region_code,
+            "publishedAfter": published_after,
             "maxResults": 50,
             "key": API_KEY,
         }
         if page_token:
             params["pageToken"] = page_token
         try:
-            data = api_get(params)
+            data = api_get("search", params)
         except Exception as e:
-            print(f"[{region_code}] API 호출 실패: {e}", file=sys.stderr)
+            print(f"[{region_code}] search API 호출 실패: {e}", file=sys.stderr)
             break
 
-        candidates.extend(data.get("items", []))
+        for item in data.get("items", []):
+            vid = (item.get("id") or {}).get("videoId")
+            if vid:
+                ids.append(vid)
         page_token = data.get("nextPageToken")
         if not page_token:
             break
-    return candidates
+    return ids
+
+
+def fetch_video_details(video_ids: list) -> list:
+    """search.list로 얻은 video id 목록에 대해 videos.list로 상세정보(통계/길이/카테고리)를
+    50개씩 배치로 가져온다."""
+    items = []
+    for i in range(0, len(video_ids), 50):
+        batch = video_ids[i:i + 50]
+        params = {
+            "part": "snippet,statistics,contentDetails",
+            "id": ",".join(batch),
+            "key": API_KEY,
+        }
+        try:
+            data = api_get("videos", params)
+        except Exception as e:
+            print(f"videos.list 호출 실패: {e}", file=sys.stderr)
+            continue
+        items.extend(data.get("items", []))
+    return items
 
 
 def collect_group_candidates(region_codes: list) -> list:
-    """여러 지역 코드의 후보를 합치고 video id 기준으로 중복 제거."""
+    """여러 지역 코드의 후보를 합치고 video id 기준으로 중복 제거한 뒤 상세정보를 가져온다."""
     seen_ids = set()
-    merged = []
+    all_ids = []
     for region_code in region_codes:
-        for item in fetch_region_candidates(region_code):
-            vid = item.get("id")
-            if vid and vid not in seen_ids:
+        for vid in search_region_video_ids(region_code):
+            if vid not in seen_ids:
                 seen_ids.add(vid)
-                merged.append(item)
-    return merged
+                all_ids.append(vid)
+    return fetch_video_details(all_ids)
 
 
 def to_video_record(item: dict) -> dict:
