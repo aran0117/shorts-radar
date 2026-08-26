@@ -25,7 +25,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", sans-serif;
   }
   header {
-    padding: 32px 24px 16px;
+    padding: 32px 24px 8px;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -44,19 +44,62 @@
     margin: 0 auto;
     padding: 8px 24px 48px;
   }
-  .country-section {
-    margin-top: 36px;
+  .tabbar {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
   }
-  .country-title {
-    font-size: 20px;
-    margin: 0 0 14px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--card-border);
+  .tab {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-dim);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .tab.active {
+    color: var(--bg);
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .tab.sub {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+  .datebar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  .datebar button {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text);
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  .datebar button:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+  .datebar .date-label {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 14px;
   }
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 16px;
+    margin-top: 20px;
   }
   .card {
     display: block;
@@ -74,8 +117,9 @@
   }
   .thumb-wrap {
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 9 / 16;
     background: #000;
+    max-height: 320px;
   }
   .thumb {
     width: 100%;
@@ -107,17 +151,6 @@
   .card-body {
     padding: 12px;
   }
-  .cat-badge {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 999px;
-    margin-bottom: 8px;
-  }
-  .cat-film { background: rgba(255,157,108,0.15); color: var(--film); }
-  .cat-show { background: rgba(124,224,195,0.15); color: var(--show); }
-  .cat-viral { background: rgba(255,124,168,0.15); color: var(--viral); }
   .title {
     font-size: 14px;
     line-height: 1.4;
@@ -144,9 +177,10 @@
     color: var(--accent);
     font-weight: 600;
   }
-  .empty {
+  .empty, .loading {
     color: var(--text-dim);
     font-size: 14px;
+    margin-top: 24px;
   }
   footer {
     max-width: 1200px;
@@ -160,603 +194,180 @@
 <body>
   <header>
     <h1>🌏 글로벌 쇼츠 트렌드</h1>
-    <p>매일 자동 갱신 · 마지막 업데이트: 2026-08-26 23:55:06 (KST) · 3분 이하 영상 · 조회수+좋아요 합산 점수 기준 국가별 TOP 10</p>
+    <p>매일 자동 갱신 · 1분 이하 실제 세로형(9:16) 쇼츠만 · 조회수+좋아요 합산 점수 기준 TOP 10</p>
   </header>
   <main>
-    
-    <section class="country-section">
-      <h2 class="country-title">🇺🇸 미국</h2>
-      <div class="grid">
-        
-      <a class="card" href="https://www.youtube.com/watch?v=L2NAh3CIdig" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/L2NAh3CIdig/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#1</span>
-          <span class="duration">1:37</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-show">🎤 예능쇼츠</span>
-          <h3 class="title">Avengers Endgame: Encore | Official Trailer | In Theaters Sep 25</h3>
-          <p class="channel">Marvel Entertainment</p>
-          <div class="stat-row">
-            <span>👁 746.9만</span>
-            <span>👍 26.3만</span>
-            <span class="score">점수 1.00</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=Bm5S7ZKk6K8" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/Bm5S7ZKk6K8/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#2</span>
-          <span class="duration">2:35</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-show">🎤 예능쇼츠</span>
-          <h3 class="title">Haiwaan - Official Trailer | Akshay Kumar, Saif Ali Khan, Boman, Shriya, Saiyami | Priyadarshan</h3>
-          <p class="channel">Zee Music Company</p>
-          <div class="stat-row">
-            <span>👁 695.1만</span>
-            <span>👍 13.4만</span>
-            <span class="score">점수 0.93</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=cVST-605PfY" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/cVST-605PfY/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#3</span>
-          <span class="duration">1:57</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-film">🎬 해외영화쇼츠</span>
-          <h3 class="title">THE VVAAN - Official Teaser | Sidharth Malhotra | Tamannaah Bhatia | In Cinemas 25th Sept 2026</h3>
-          <p class="channel">Balaji Motion Pictures</p>
-          <div class="stat-row">
-            <span>👁 645.3만</span>
-            <span>👍 8.7만</span>
-            <span class="score">점수 0.89</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=IGk17XQ7IrQ" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/IGk17XQ7IrQ/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#4</span>
-          <span class="duration">1:46</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">The Witcher 3: Wild Hunt — Remastered | Official Announcement Trailer</h3>
-          <p class="channel">The Witcher</p>
-          <div class="stat-row">
-            <span>👁 196.3만</span>
-            <span>👍 15.0만</span>
-            <span class="score">점수 0.82</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=eFxvsyUoFi0" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/eFxvsyUoFi0/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#5</span>
-          <span class="duration">1:18</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">THE FINAL BATTLE OF KATANA KINGDOM (Brawl Stars Animation)</h3>
-          <p class="channel">Brawl Stars</p>
-          <div class="stat-row">
-            <span>👁 252.5만</span>
-            <span>👍 9.7만</span>
-            <span class="score">점수 0.81</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=UycLg27fKHY" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/UycLg27fKHY/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#6</span>
-          <span class="duration">2:36</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">love me, hate me</h3>
-          <p class="channel">Dvrksim - Topic</p>
-          <div class="stat-row">
-            <span>👁 287.7만</span>
-            <span>👍 7.6만</span>
-            <span class="score">점수 0.80</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=MM60juTPkSM" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/MM60juTPkSM/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#7</span>
-          <span class="duration">3:00</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">ANANTA Launch Date Trailer | Global Release January 15th, 2027</h3>
-          <p class="channel">Ananta</p>
-          <div class="stat-row">
-            <span>👁 136.3만</span>
-            <span>👍 5.4만</span>
-            <span class="score">점수 0.70</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=ZMGNAvNs_20" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/ZMGNAvNs_20/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#8</span>
-          <span class="duration">2:39</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">Heaven Baby</h3>
-          <p class="channel">Ayra Starr - Topic</p>
-          <div class="stat-row">
-            <span>👁 165.0만</span>
-            <span>👍 3.7만</span>
-            <span class="score">점수 0.68</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=6t7C4qaHihE" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/6t7C4qaHihE/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#9</span>
-          <span class="duration">2:11</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-show">🎤 예능쇼츠</span>
-          <h3 class="title">Ali G: Who Iz I? | Official Trailer</h3>
-          <p class="channel">Amazon MGM Studios</p>
-          <div class="stat-row">
-            <span>👁 366.4만</span>
-            <span>👍 1.4만</span>
-            <span class="score">점수 0.67</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=Cq58YGCO_2c" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/Cq58YGCO_2c/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#10</span>
-          <span class="duration">2:37</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-show">🎤 예능쇼츠</span>
-          <h3 class="title">Gandhari | Official Trailer | Taapsee Pannu | Netflix India</h3>
-          <p class="channel">Netflix India</p>
-          <div class="stat-row">
-            <span>👁 424.1만</span>
-            <span>👍 1.1만</span>
-            <span class="score">점수 0.66</span>
-          </div>
-        </div>
-      </a>
-    
-      </div>
-    </section>
-    
-
-    <section class="country-section">
-      <h2 class="country-title">🇯🇵 일본</h2>
-      <div class="grid">
-        
-      <a class="card" href="https://www.youtube.com/watch?v=eFxvsyUoFi0" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/eFxvsyUoFi0/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#1</span>
-          <span class="duration">1:18</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">THE FINAL BATTLE OF KATANA KINGDOM (Brawl Stars Animation)</h3>
-          <p class="channel">Brawl Stars</p>
-          <div class="stat-row">
-            <span>👁 252.5만</span>
-            <span>👍 9.7만</span>
-            <span class="score">점수 1.00</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=B5u8JiGVI_k" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/B5u8JiGVI_k/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#2</span>
-          <span class="duration">2:48</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">BIGBANG - ‘BiiiG’ DANCE PRACTICE</h3>
-          <p class="channel">BIGBANG</p>
-          <div class="stat-row">
-            <span>👁 151.4만</span>
-            <span>👍 9.5만</span>
-            <span class="score">점수 0.95</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=bPjrHu60278" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/bPjrHu60278/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#3</span>
-          <span class="duration">2:22</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-show">🎤 예능쇼츠</span>
-          <h3 class="title">ENHYPEN (엔하이픈) ‘Bloody Paradise’ Dance Practice</h3>
-          <p class="channel">ENHYPEN</p>
-          <div class="stat-row">
-            <span>👁 83.4만</span>
-            <span>👍 9.7만</span>
-            <span class="score">점수 0.89</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=oOYXSH-mrmE" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/oOYXSH-mrmE/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#4</span>
-          <span class="duration">2:05</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">ENHYPEN (엔하이픈) &#x27;THE SIN : BLISS&#x27; Trailer vol.2 Film</h3>
-          <p class="channel">HYBE LABELS</p>
-          <div class="stat-row">
-            <span>👁 26.7만</span>
-            <span>👍 5.6만</span>
-            <span class="score">점수 0.76</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=QMyhhKJq_l4" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/QMyhhKJq_l4/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#5</span>
-          <span class="duration">3:00</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">『無限大ANANTA』リリース日発表PV丨27年1月15日グローバルリリース</h3>
-          <p class="channel">無限大Ananta</p>
-          <div class="stat-row">
-            <span>👁 47.0만</span>
-            <span>👍 1.2만</span>
-            <span class="score">점수 0.75</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=882FHoKwZVk" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/882FHoKwZVk/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#6</span>
-          <span class="duration">2:13</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">【崩壊：スターレイル】ロビン・夏空の歌 キャラクターPV 「風を追いかけて」</h3>
-          <p class="channel">崩壊：スターレイル</p>
-          <div class="stat-row">
-            <span>👁 34.7만</span>
-            <span>👍 2.2만</span>
-            <span class="score">점수 0.75</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=fxLaXFMggGQ" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/fxLaXFMggGQ/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#7</span>
-          <span class="duration">1:36</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-film">🎬 해외영화쇼츠</span>
-          <h3 class="title">「アベンジャーズ／エンドゲーム：アンコール」予告映像｜9月23日(水・祝)より期間限定公開｜MARVEL(マーベル)</h3>
-          <p class="channel">マーベル公式</p>
-          <div class="stat-row">
-            <span>👁 44.8만</span>
-            <span>👍 4,800</span>
-            <span class="score">점수 0.70</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=daPjH8Hhu3I" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/daPjH8Hhu3I/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#8</span>
-          <span class="duration">1:28</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">『ロックマン: デュアル オーバーライド』 1st トレーラー</h3>
-          <p class="channel">CapcomChannel</p>
-          <div class="stat-row">
-            <span>👁 13.4만</span>
-            <span>👍 4,324</span>
-            <span class="score">점수 0.58</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=-tUulrroh6A" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/-tUulrroh6A/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#9</span>
-          <span class="duration">1:37</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-show">🎤 예능쇼츠</span>
-          <h3 class="title">「俺のこと、なんか言ってた？」ティーザー予告編 - Netflix</h3>
-          <p class="channel">Netflix Japan</p>
-          <div class="stat-row">
-            <span>👁 16.2만</span>
-            <span>👍 2,231</span>
-            <span class="score">점수 0.57</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=IgKDlz6E95E" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/IgKDlz6E95E/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#10</span>
-          <span class="duration">1:38</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">Showa American Story - gamescom In-Game Trailer</h3>
-          <p class="channel">NEKCOM Games</p>
-          <div class="stat-row">
-            <span>👁 10.2만</span>
-            <span>👍 4,522</span>
-            <span class="score">점수 0.56</span>
-          </div>
-        </div>
-      </a>
-    
-      </div>
-    </section>
-    
-
-    <section class="country-section">
-      <h2 class="country-title">🇭🇰 홍콩</h2>
-      <div class="grid">
-        
-      <a class="card" href="https://www.youtube.com/watch?v=xXZwZ0DolJc" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/xXZwZ0DolJc/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#1</span>
-          <span class="duration">2:55</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">BABYMONSTER - &#x27;MOON&#x27; M/V</h3>
-          <p class="channel">BABYMONSTER</p>
-          <div class="stat-row">
-            <span>👁 7576.1만</span>
-            <span>👍 77.2만</span>
-            <span class="score">점수 0.98</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=is8UDe2PhKQ" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/is8UDe2PhKQ/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#2</span>
-          <span class="duration">2:34</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">KATSEYE (캣츠아이) &#x27;Hootie Frutti&#x27; Official MV</h3>
-          <p class="channel">HYBE LABELS</p>
-          <div class="stat-row">
-            <span>👁 4647.8만</span>
-            <span>👍 91.2만</span>
-            <span class="score">점수 0.96</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=X1aFkAkFASk" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/X1aFkAkFASk/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#3</span>
-          <span class="duration">2:10</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-show">🎤 예능쇼츠</span>
-          <h3 class="title">Avengers: Doomsday | Special Look | In Theaters December 18</h3>
-          <p class="channel">Marvel Entertainment</p>
-          <div class="stat-row">
-            <span>👁 3530.4만</span>
-            <span>👍 133.3만</span>
-            <span class="score">점수 0.96</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=z9ifbheDGFM" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/z9ifbheDGFM/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#4</span>
-          <span class="duration">2:26</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">Less than a Lover</h3>
-          <p class="channel">JENNIE - Topic</p>
-          <div class="stat-row">
-            <span>👁 1115.9만</span>
-            <span>👍 21.0만</span>
-            <span class="score">점수 0.83</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=UsbRoaH6y-Q" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/UsbRoaH6y-Q/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#5</span>
-          <span class="duration">2:23</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">KiiiKiii 키키 &#x27;Pop Off Pop Off&#x27; MV</h3>
-          <p class="channel">STARSHIP</p>
-          <div class="stat-row">
-            <span>👁 750.2만</span>
-            <span>👍 18.7만</span>
-            <span class="score">점수 0.81</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=Fdar7gTQnog" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/Fdar7gTQnog/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#6</span>
-          <span class="duration">1:36</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-show">🎤 예능쇼츠</span>
-          <h3 class="title">Star Wars: Ahsoka Season 2 | Teaser Trailer | Streaming January 20 on Disney+</h3>
-          <p class="channel">Star Wars</p>
-          <div class="stat-row">
-            <span>👁 507.1만</span>
-            <span>👍 11.7만</span>
-            <span class="score">점수 0.77</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=IGk17XQ7IrQ" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/IGk17XQ7IrQ/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#7</span>
-          <span class="duration">1:46</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">The Witcher 3: Wild Hunt — Remastered | Official Announcement Trailer</h3>
-          <p class="channel">The Witcher</p>
-          <div class="stat-row">
-            <span>👁 196.3만</span>
-            <span>👍 15.0만</span>
-            <span class="score">점수 0.73</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=eFxvsyUoFi0" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/eFxvsyUoFi0/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#8</span>
-          <span class="duration">1:18</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">THE FINAL BATTLE OF KATANA KINGDOM (Brawl Stars Animation)</h3>
-          <p class="channel">Brawl Stars</p>
-          <div class="stat-row">
-            <span>👁 252.5만</span>
-            <span>👍 9.7만</span>
-            <span class="score">점수 0.73</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=YJhEsDa2o8w" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/YJhEsDa2o8w/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#9</span>
-          <span class="duration">2:12</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-viral">🔥 중독성컨텐츠</span>
-          <h3 class="title">Bloody Paradise</h3>
-          <p class="channel">ENHYPEN - Topic</p>
-          <div class="stat-row">
-            <span>👁 153.4만</span>
-            <span>👍 9.2만</span>
-            <span class="score">점수 0.70</span>
-          </div>
-        </div>
-      </a>
-    
-
-      <a class="card" href="https://www.youtube.com/watch?v=iiuRyNg3giw" target="_blank" rel="noopener">
-        <div class="thumb-wrap">
-          <img class="thumb" src="https://i.ytimg.com/vi/iiuRyNg3giw/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="rank">#10</span>
-          <span class="duration">1:28</span>
-        </div>
-        <div class="card-body">
-          <span class="cat-badge cat-film">🎬 해외영화쇼츠</span>
-          <h3 class="title">Cyberpunk: Edgerunners 2 | Official Teaser #3 | Netflix Anime</h3>
-          <p class="channel">Netflix Anime</p>
-          <div class="stat-row">
-            <span>👁 130.0만</span>
-            <span>👍 7.7만</span>
-            <span class="score">점수 0.68</span>
-          </div>
-        </div>
-      </a>
-    
-      </div>
-    </section>
-    
+    <div class="tabbar" id="categoryTabs"></div>
+    <div class="tabbar" id="groupTabs"></div>
+    <div class="datebar" id="dateBar"></div>
+    <div id="content"></div>
   </main>
   <footer>
-    개인용으로 생성된 페이지입니다. 데이터 출처: YouTube Data API (mostPopular).
+    개인용으로 생성된 페이지입니다. 데이터 출처: YouTube Data API (mostPopular) + shorts 판별 검증.
   </footer>
+
+<script>
+(function () {
+  var state = {
+    categories: [],
+    groups: [],
+    dates: [],
+    dateIndex: -1,      // state.dates 안에서 현재 보고 있는 날짜 인덱스
+    category: null,
+    group: null,
+    cache: {}           // date -> day json
+  };
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function formatCount(n) {
+    n = Number(n) || 0;
+    if (n >= 100000000) return (n / 100000000).toFixed(1) + '억';
+    if (n >= 10000) return (n / 10000).toFixed(1) + '만';
+    return n.toLocaleString();
+  }
+
+  function renderTabs() {
+    var catBar = document.getElementById('categoryTabs');
+    catBar.innerHTML = '';
+    state.categories.forEach(function (cat) {
+      var b = el('button', 'tab' + (cat.key === state.category ? ' active' : ''), cat.label);
+      b.onclick = function () { state.category = cat.key; renderTabs(); renderContent(); };
+      catBar.appendChild(b);
+    });
+
+    var groupBar = document.getElementById('groupTabs');
+    groupBar.innerHTML = '';
+    state.groups.forEach(function (g) {
+      var b = el('button', 'tab sub' + (g.key === state.group ? ' active' : ''), g.label);
+      b.onclick = function () { state.group = g.key; renderTabs(); renderContent(); };
+      groupBar.appendChild(b);
+    });
+
+    renderDateBar();
+  }
+
+  function renderDateBar() {
+    var bar = document.getElementById('dateBar');
+    bar.innerHTML = '';
+    if (!state.dates.length) return;
+
+    var prevBtn = el('button', null, '◀ 이전 날짜');
+    prevBtn.disabled = state.dateIndex <= 0;
+    prevBtn.onclick = function () {
+      if (state.dateIndex > 0) { state.dateIndex -= 1; renderDateBar(); renderContent(); }
+    };
+
+    var nextBtn = el('button', null, '다음 날짜 ▶');
+    nextBtn.disabled = state.dateIndex >= state.dates.length - 1;
+    nextBtn.onclick = function () {
+      if (state.dateIndex < state.dates.length - 1) { state.dateIndex += 1; renderDateBar(); renderContent(); }
+    };
+
+    var label = el('span', 'date-label', state.dates[state.dateIndex] +
+      (state.dateIndex === state.dates.length - 1 ? ' (최신)' : ''));
+
+    bar.appendChild(prevBtn);
+    bar.appendChild(label);
+    bar.appendChild(nextBtn);
+  }
+
+  function videoCard(v, rank) {
+    var a = el('a', 'card');
+    a.href = 'https://www.youtube.com/shorts/' + v.video_id;
+    a.target = '_blank';
+    a.rel = 'noopener';
+
+    var thumbWrap = el('div', 'thumb-wrap');
+    var img = el('img', 'thumb');
+    img.src = v.thumbnail;
+    img.loading = 'lazy';
+    img.alt = '';
+    var rankEl = el('span', 'rank', '#' + rank);
+    var mm = Math.floor(v.duration_sec / 60);
+    var ss = v.duration_sec % 60;
+    var durEl = el('span', 'duration', mm + ':' + (ss < 10 ? '0' : '') + ss);
+    thumbWrap.appendChild(img);
+    thumbWrap.appendChild(rankEl);
+    thumbWrap.appendChild(durEl);
+
+    var body = el('div', 'card-body');
+    var title = el('h3', 'title', v.title);
+    var channel = el('p', 'channel', v.channel);
+    var statRow = el('div', 'stat-row');
+    statRow.appendChild(el('span', null, '👁 ' + formatCount(v.view_count)));
+    statRow.appendChild(el('span', null, '👍 ' + formatCount(v.like_count)));
+    statRow.appendChild(el('span', 'score', '점수 ' + v.score.toFixed(2)));
+    body.appendChild(title);
+    body.appendChild(channel);
+    body.appendChild(statRow);
+
+    a.appendChild(thumbWrap);
+    a.appendChild(body);
+    return a;
+  }
+
+  function renderContent() {
+    var content = document.getElementById('content');
+    content.innerHTML = '';
+    if (state.dateIndex < 0) {
+      content.appendChild(el('p', 'empty', '아직 수집된 데이터가 없어요. 내일 첫 자동 실행 후 다시 확인해주세요.'));
+      return;
+    }
+    var date = state.dates[state.dateIndex];
+
+    function draw(dayData) {
+      content.innerHTML = '';
+      var videos = ((dayData.categories || {})[state.category] || {})[state.group] || [];
+      if (!videos.length) {
+        content.appendChild(el('p', 'empty', '이 조합(카테고리/국가/날짜)에는 조건에 맞는 쇼츠가 없었어요.'));
+        return;
+      }
+      var grid = el('div', 'grid');
+      videos.forEach(function (v, i) { grid.appendChild(videoCard(v, i + 1)); });
+      content.appendChild(grid);
+    }
+
+    if (state.cache[date]) {
+      draw(state.cache[date]);
+      return;
+    }
+    content.appendChild(el('p', 'loading', '불러오는 중...'));
+    fetch('data/days/' + date + '.json', { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (dayData) {
+        state.cache[date] = dayData;
+        draw(dayData);
+      })
+      .catch(function () {
+        content.innerHTML = '';
+        content.appendChild(el('p', 'empty', '데이터를 불러오지 못했어요.'));
+      });
+  }
+
+  fetch('data/index.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (idx) {
+      state.categories = idx.categories || [];
+      state.groups = idx.groups || [];
+      state.dates = idx.dates || [];
+      state.dateIndex = state.dates.length - 1;
+      state.category = (state.categories[0] || {}).key || null;
+      state.group = (state.groups[0] || {}).key || null;
+      renderTabs();
+      renderContent();
+    })
+    .catch(function () {
+      document.getElementById('content').appendChild(
+        el('p', 'empty', '아직 수집된 데이터가 없어요. 첫 자동 실행 후 다시 확인해주세요.')
+      );
+    });
+})();
+</script>
 </body>
 </html>
