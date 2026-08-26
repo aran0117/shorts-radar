@@ -1,6 +1,6 @@
 {
   "date": "2026-08-27",
-  "generated_at_kst": "2026-08-27 02:31:07",
+  "generated_at_kst": "2026-08-27 02:41:40",
   "categories": {
     "show": {
       "US": [
@@ -12,9 +12,9 @@
           "thumbnail": "https://i.ytimg.com/vi/Jn2QjIBni2g/hqdefault.jpg",
           "category": "show",
           "duration_sec": 17,
-          "view_count": 3294395,
-          "like_count": 50417,
-          "score": 0.7091
+          "view_count": 3315470,
+          "like_count": 50881,
+          "score": 0.711
         },
         {
           "video_id": "hyehDwZOYWM",
@@ -24,9 +24,9 @@
           "thumbnail": "https://i.ytimg.com/vi/hyehDwZOYWM/hqdefault.jpg",
           "category": "show",
           "duration_sec": 40,
-          "view_count": 2886164,
-          "like_count": 44685,
-          "score": 0.6599
+          "view_count": 2889128,
+          "like_count": 44716,
+          "score": 0.6598
         },
         {
           "video_id": "12ValGCh3gQ",
@@ -36,9 +36,9 @@
           "thumbnail": "https://i.ytimg.com/vi/12ValGCh3gQ/hqdefault.jpg",
           "category": "show",
           "duration_sec": 12,
-          "view_count": 3384910,
-          "like_count": 11845,
-          "score": 0.6558
+          "view_count": 3387627,
+          "like_count": 11853,
+          "score": 0.6556
         },
         {
           "video_id": "21fzVHTXjpg",
@@ -48,9 +48,9 @@
           "thumbnail": "https://i.ytimg.com/vi/21fzVHTXjpg/hqdefault.jpg",
           "category": "show",
           "duration_sec": 39,
-          "view_count": 2905221,
-          "like_count": 29069,
-          "score": 0.6436
+          "view_count": 2919060,
+          "like_count": 29144,
+          "score": 0.6448
         },
         {
           "video_id": "BfVkT3AxTIg",
@@ -60,9 +60,9 @@
           "thumbnail": "https://i.ytimg.com/vi/BfVkT3AxTIg/hqdefault.jpg",
           "category": "show",
           "duration_sec": 60,
-          "view_count": 2375735,
-          "like_count": 112284,
-          "score": 0.6347
+          "view_count": 2378590,
+          "like_count": 112578,
+          "score": 0.6348
         },
         {
           "video_id": "lu-tplKbFdQ",
@@ -72,9 +72,9 @@
           "thumbnail": "https://i.ytimg.com/vi/lu-tplKbFdQ/hqdefault.jpg",
           "category": "show",
           "duration_sec": 15,
-          "view_count": 2608375,
-          "like_count": 49603,
-          "score": 0.6307
+          "view_count": 2608955,
+          "like_count": 49612,
+          "score": 0.6303
         },
         {
           "video_id": "14GAklopZ5k",
@@ -84,9 +84,9 @@
           "thumbnail": "https://i.ytimg.com/vi/14GAklopZ5k/hqdefault.jpg",
           "category": "show",
           "duration_sec": 16,
-          "view_count": 2792407,
-          "like_count": 12718,
-          "score": 0.5949
+          "view_count": 2802429,
+          "like_count": 12782,
+          "score": 0.5958
         },
         {
           "video_id": "2qOrSieacww",
@@ -96,8 +96,8 @@
           "thumbnail": "https://i.ytimg.com/vi/2qOrSieacww/hqdefault.jpg",
           "category": "show",
           "duration_sec": 27,
-          "view_count": 2097661,
-          "like_count": 55067,
+          "view_count": 2099942,
+          "like_count": 55124,
           "score": 0.5627
         },
         {
@@ -108,21 +108,21 @@
           "thumbnail": "https://i.ytimg.com/vi/pzTrJ-e3lLE/hqdefault.jpg",
           "category": "show",
           "duration_sec": 36,
-          "view_count": 2060630,
-          "like_count": 46167,
+          "view_count": 2062590,
+          "like_count": 46197,
           "score": 0.5492
         },
         {
-          "video_id": "pO2ZAF-hq-M",
-          "title": "Gullak fod ke❤️ |#shorts |#viralvideo |#trending |#song",
-          "channel": "Pinki Prajapati",
-          "published_at": "2026-08-25T06:30:21Z",
-          "thumbnail": "https://i.ytimg.com/vi/pO2ZAF-hq-M/hqdefault.jpg",
+          "video_id": "4nwwaxJgqTM",
+          "title": "研究に行き詰まった博士課程学生のリアル #Shorts",
+          "channel": "QuizKnock",
+          "published_at": "2026-08-25T10:30:02Z",
+          "thumbnail": "https://i.ytimg.com/vi/4nwwaxJgqTM/hqdefault.jpg",
           "category": "show",
-          "duration_sec": 30,
-          "view_count": 2334941,
-          "like_count": 16406,
-          "score": 0.5463
+          "duration_sec": 11,
+          "view_count": 2007968,
+          "like_count": 36147,
+          "score": 0.5297
         }
       ],
       "JP": [
@@ -134,9 +134,9 @@
           "thumbnail": "https://i.ytimg.com/vi/Jn2QjIBni2g/hqdefault.jpg",
           "category": "show",
           "duration_sec": 17,
-          "view_count": 3308199,
-          "like_count": 50507,
-          "score": 0.9586
+          "view_count": 3322961,
+          "like_count": 50970,
+          "score": 0.9534
         },
         {
           "video_id": "12ValGCh3gQ",
@@ -146,21 +146,33 @@
           "thumbnail": "https://i.ytimg.com/vi/12ValGCh3gQ/hqdefault.jpg",
           "category": "show",
           "duration_sec": 12,
-          "view_count": 3386096,
-          "like_count": 11845,
-          "score": 0.9033
+          "view_count": 3387627,
+          "like_count": 11855,
+          "score": 0.9032
         },
         {
-          "video_id": "BfVkT3AxTIg",
-          "title": "How Batman Keeps His Identity Secret | #youtubeshorts #shorts #comics #batman #dc #justiceleague",
-          "channel": "NightToons",
-          "published_at": "2026-08-24T22:55:09Z",
-          "thumbnail": "https://i.ytimg.com/vi/BfVkT3AxTIg/hqdefault.jpg",
+          "video_id": "hyehDwZOYWM",
+          "title": "Viral video 😱🎥# #trending #school #suspense #shorts",
+          "channel": "Rishi Salvi",
+          "published_at": "2026-08-25T07:30:02Z",
+          "thumbnail": "https://i.ytimg.com/vi/hyehDwZOYWM/hqdefault.jpg",
           "category": "show",
-          "duration_sec": 60,
-          "view_count": 2375735,
-          "like_count": 112340,
-          "score": 0.8936
+          "duration_sec": 40,
+          "view_count": 2889946,
+          "like_count": 44723,
+          "score": 0.8574
+        },
+        {
+          "video_id": "21fzVHTXjpg",
+          "title": "Tom&Jerry 😆wait For End ❤️ #shorts #shortvideo",
+          "channel": "Krishna Avyu",
+          "published_at": "2026-08-25T10:33:36Z",
+          "thumbnail": "https://i.ytimg.com/vi/21fzVHTXjpg/hqdefault.jpg",
+          "category": "show",
+          "duration_sec": 39,
+          "view_count": 2919064,
+          "like_count": 29156,
+          "score": 0.8455
         },
         {
           "video_id": "14GAklopZ5k",
@@ -170,21 +182,33 @@
           "thumbnail": "https://i.ytimg.com/vi/14GAklopZ5k/hqdefault.jpg",
           "category": "show",
           "duration_sec": 16,
-          "view_count": 2797167,
-          "like_count": 12729,
-          "score": 0.849
+          "view_count": 2802433,
+          "like_count": 12789,
+          "score": 0.7837
         },
         {
-          "video_id": "pzTrJ-e3lLE",
-          "title": "NÃO ESCOLHA O BALDE ERRADO!  #shorts",
-          "channel": "Enaldinho",
-          "published_at": "2026-08-24T22:00:22Z",
-          "thumbnail": "https://i.ytimg.com/vi/pzTrJ-e3lLE/hqdefault.jpg",
+          "video_id": "BfVkT3AxTIg",
+          "title": "How Batman Keeps His Identity Secret | #youtubeshorts #shorts #comics #batman #dc #justiceleague",
+          "channel": "NightToons",
+          "published_at": "2026-08-24T22:55:09Z",
+          "thumbnail": "https://i.ytimg.com/vi/BfVkT3AxTIg/hqdefault.jpg",
           "category": "show",
-          "duration_sec": 36,
-          "view_count": 2060630,
-          "like_count": 46171,
-          "score": 0.8127
+          "duration_sec": 60,
+          "view_count": 2378590,
+          "like_count": 112625,
+          "score": 0.771
+        },
+        {
+          "video_id": "0iUa7GrdpJg",
+          "title": "#shorts #Spider-Man #Spider-Man: Brand New Day",
+          "channel": "Spider-Man Story",
+          "published_at": "2026-08-25T09:46:44Z",
+          "thumbnail": "https://i.ytimg.com/vi/0iUa7GrdpJg/hqdefault.jpg",
+          "category": "show",
+          "duration_sec": 60,
+          "view_count": 2407078,
+          "like_count": 29032,
+          "score": 0.7204
         },
         {
           "video_id": "pO2ZAF-hq-M",
@@ -194,57 +218,33 @@
           "thumbnail": "https://i.ytimg.com/vi/pO2ZAF-hq-M/hqdefault.jpg",
           "category": "show",
           "duration_sec": 30,
-          "view_count": 2337487,
-          "like_count": 16408,
-          "score": 0.806
+          "view_count": 2340643,
+          "like_count": 16426,
+          "score": 0.6778
         },
         {
-          "video_id": "JJT95uCMzbY",
-          "title": "Reacting to PEOPLE dying in movies vs. DOGS… #shorts",
-          "channel": "Jack Pop",
-          "published_at": "2026-08-24T20:41:20Z",
-          "thumbnail": "https://i.ytimg.com/vi/JJT95uCMzbY/hqdefault.jpg",
+          "video_id": "2qOrSieacww",
+          "title": "Maine aisa kya kharid liya #abrazkhan #shorts",
+          "channel": "Abrazkhan - ck91",
+          "published_at": "2026-08-24T23:39:08Z",
+          "thumbnail": "https://i.ytimg.com/vi/2qOrSieacww/hqdefault.jpg",
           "category": "show",
-          "duration_sec": 34,
-          "view_count": 1731566,
-          "like_count": 88241,
-          "score": 0.7883
+          "duration_sec": 27,
+          "view_count": 2100539,
+          "like_count": 55135,
+          "score": 0.6598
         },
         {
-          "video_id": "6rrbJP7-QTU",
-          "title": "Miley Cyrus: Rest In Peace Dolly Parton ❤️ | #shorts #mileycyrus #dollyparton",
-          "channel": "Miley Nation",
-          "published_at": "2026-08-25T18:37:38Z",
-          "thumbnail": "https://i.ytimg.com/vi/6rrbJP7-QTU/hqdefault.jpg",
+          "video_id": "pzTrJ-e3lLE",
+          "title": "NÃO ESCOLHA O BALDE ERRADO!  #shorts",
+          "channel": "Enaldinho",
+          "published_at": "2026-08-24T22:00:22Z",
+          "thumbnail": "https://i.ytimg.com/vi/pzTrJ-e3lLE/hqdefault.jpg",
           "category": "show",
-          "duration_sec": 7,
-          "view_count": 1672495,
-          "like_count": 37335,
-          "score": 0.7409
-        },
-        {
-          "video_id": "TqPnsCPAmEk",
-          "title": "Sudden malayali alaparaigal 😅😂 #shorts #solosign #comedy #onam",
-          "channel": "SoloSign",
-          "published_at": "2026-08-25T09:32:18Z",
-          "thumbnail": "https://i.ytimg.com/vi/TqPnsCPAmEk/hqdefault.jpg",
-          "category": "show",
-          "duration_sec": 47,
-          "view_count": 910275,
-          "like_count": 35064,
-          "score": 0.5556
-        },
-        {
-          "video_id": "MyMe2bZoDh4",
-          "title": "Altı Üstü İstanbul 12. Bölüm Fragmanı | ''Son duanı et!'' #shorts #altıüstüistanbul",
-          "channel": "Altı Üstü İstanbul",
-          "published_at": "2026-08-24T21:18:31Z",
-          "thumbnail": "https://i.ytimg.com/vi/MyMe2bZoDh4/hqdefault.jpg",
-          "category": "show",
-          "duration_sec": 45,
-          "view_count": 949087,
-          "like_count": 25828,
-          "score": 0.5549
+          "duration_sec": 36,
+          "view_count": 2062590,
+          "like_count": 46199,
+          "score": 0.6404
         }
       ],
       "HK_TW": [
@@ -256,8 +256,8 @@
           "thumbnail": "https://i.ytimg.com/vi/FR83QP_KgzQ/hqdefault.jpg",
           "category": "show",
           "duration_sec": 14,
-          "view_count": 10578632,
-          "like_count": 48856,
+          "view_count": 10591579,
+          "like_count": 48950,
           "score": 0.9642
         },
         {
@@ -268,21 +268,9 @@
           "thumbnail": "https://i.ytimg.com/vi/Jn2QjIBni2g/hqdefault.jpg",
           "category": "show",
           "duration_sec": 17,
-          "view_count": 3308210,
-          "like_count": 50595,
-          "score": 0.6595
-        },
-        {
-          "video_id": "hyehDwZOYWM",
-          "title": "Viral video 😱🎥# #trending #school #suspense #shorts",
-          "channel": "Rishi Salvi",
-          "published_at": "2026-08-25T07:30:02Z",
-          "thumbnail": "https://i.ytimg.com/vi/hyehDwZOYWM/hqdefault.jpg",
-          "category": "show",
-          "duration_sec": 40,
-          "view_count": 2888004,
-          "like_count": 44692,
-          "score": 0.6184
+          "view_count": 3322988,
+          "like_count": 51069,
+          "score": 0.7594
         },
         {
           "video_id": "BfVkT3AxTIg",
@@ -292,33 +280,21 @@
           "thumbnail": "https://i.ytimg.com/vi/BfVkT3AxTIg/hqdefault.jpg",
           "category": "show",
           "duration_sec": 60,
-          "view_count": 2377702,
-          "like_count": 112394,
-          "score": 0.6069
+          "view_count": 2379524,
+          "like_count": 112679,
+          "score": 0.7339
         },
         {
-          "video_id": "12ValGCh3gQ",
-          "title": "what does the second girl kinda look sad?😢💦 #shorts #funny #dance #kpop #ateez #trio",
-          "channel": "Sha Trio",
-          "published_at": "2026-08-25T09:56:11Z",
-          "thumbnail": "https://i.ytimg.com/vi/12ValGCh3gQ/hqdefault.jpg",
+          "video_id": "hyehDwZOYWM",
+          "title": "Viral video 😱🎥# #trending #school #suspense #shorts",
+          "channel": "Rishi Salvi",
+          "published_at": "2026-08-25T07:30:02Z",
+          "thumbnail": "https://i.ytimg.com/vi/hyehDwZOYWM/hqdefault.jpg",
           "category": "show",
-          "duration_sec": 12,
-          "view_count": 3386096,
-          "like_count": 11846,
-          "score": 0.6033
-        },
-        {
-          "video_id": "21fzVHTXjpg",
-          "title": "Tom&Jerry 😆wait For End ❤️ #shorts #shortvideo",
-          "channel": "Krishna Avyu",
-          "published_at": "2026-08-25T10:33:36Z",
-          "thumbnail": "https://i.ytimg.com/vi/21fzVHTXjpg/hqdefault.jpg",
-          "category": "show",
-          "duration_sec": 39,
-          "view_count": 2914916,
-          "like_count": 29099,
-          "score": 0.6024
+          "duration_sec": 40,
+          "view_count": 2889946,
+          "like_count": 44729,
+          "score": 0.7288
         },
         {
           "video_id": "lu-tplKbFdQ",
@@ -328,33 +304,33 @@
           "thumbnail": "https://i.ytimg.com/vi/lu-tplKbFdQ/hqdefault.jpg",
           "category": "show",
           "duration_sec": 15,
-          "view_count": 2608751,
-          "like_count": 49605,
-          "score": 0.5961
+          "view_count": 2609109,
+          "like_count": 49615,
+          "score": 0.715
         },
         {
-          "video_id": "Sicw9nBkuZc",
-          "title": "Beta chod ka chola gaya 😭|| Tony02 #shorts #youtubeshorts",
-          "channel": "Tony02",
-          "published_at": "2026-08-25T02:00:17Z",
-          "thumbnail": "https://i.ytimg.com/vi/Sicw9nBkuZc/hqdefault.jpg",
+          "video_id": "21fzVHTXjpg",
+          "title": "Tom&Jerry 😆wait For End ❤️ #shorts #shortvideo",
+          "channel": "Krishna Avyu",
+          "published_at": "2026-08-25T10:33:36Z",
+          "thumbnail": "https://i.ytimg.com/vi/21fzVHTXjpg/hqdefault.jpg",
           "category": "show",
           "duration_sec": 39,
-          "view_count": 2916091,
-          "like_count": 23773,
-          "score": 0.5938
+          "view_count": 2923187,
+          "like_count": 29175,
+          "score": 0.7125
         },
         {
-          "video_id": "14GAklopZ5k",
-          "title": "VIDEO DIVERTIDO #casosdefamilia #humor #divertido #humor #comedia #shortvideo #shorts #shorts #short",
-          "channel": "Familia Ibañez",
-          "published_at": "2026-08-24T22:26:06Z",
-          "thumbnail": "https://i.ytimg.com/vi/14GAklopZ5k/hqdefault.jpg",
+          "video_id": "12ValGCh3gQ",
+          "title": "what does the second girl kinda look sad?😢💦 #shorts #funny #dance #kpop #ateez #trio",
+          "channel": "Sha Trio",
+          "published_at": "2026-08-25T09:56:11Z",
+          "thumbnail": "https://i.ytimg.com/vi/12ValGCh3gQ/hqdefault.jpg",
           "category": "show",
-          "duration_sec": 16,
-          "view_count": 2797184,
-          "like_count": 12738,
-          "score": 0.5561
+          "duration_sec": 12,
+          "view_count": 3387627,
+          "like_count": 11858,
+          "score": 0.7001
         },
         {
           "video_id": "2qOrSieacww",
@@ -364,9 +340,33 @@
           "thumbnail": "https://i.ytimg.com/vi/2qOrSieacww/hqdefault.jpg",
           "category": "show",
           "duration_sec": 27,
-          "view_count": 2099130,
-          "like_count": 55085,
-          "score": 0.5434
+          "view_count": 2100539,
+          "like_count": 55147,
+          "score": 0.6809
+        },
+        {
+          "video_id": "pzTrJ-e3lLE",
+          "title": "NÃO ESCOLHA O BALDE ERRADO!  #shorts",
+          "channel": "Enaldinho",
+          "published_at": "2026-08-24T22:00:22Z",
+          "thumbnail": "https://i.ytimg.com/vi/pzTrJ-e3lLE/hqdefault.jpg",
+          "category": "show",
+          "duration_sec": 36,
+          "view_count": 2063465,
+          "like_count": 46206,
+          "score": 0.6702
+        },
+        {
+          "video_id": "14GAklopZ5k",
+          "title": "VIDEO DIVERTIDO #casosdefamilia #humor #divertido #humor #comedia #shortvideo #shorts #shorts #short",
+          "channel": "Familia Ibañez",
+          "published_at": "2026-08-24T22:26:06Z",
+          "thumbnail": "https://i.ytimg.com/vi/14GAklopZ5k/hqdefault.jpg",
+          "category": "show",
+          "duration_sec": 16,
+          "view_count": 2802433,
+          "like_count": 12799,
+          "score": 0.6695
         }
       ]
     },
@@ -380,9 +380,9 @@
           "thumbnail": "https://i.ytimg.com/vi/uerHl2tgQNc/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 11,
-          "view_count": 17149564,
-          "like_count": 54677,
-          "score": 0.9402
+          "view_count": 17141742,
+          "like_count": 54681,
+          "score": 0.9401
         },
         {
           "video_id": "MfHWFN2TAvQ",
@@ -392,9 +392,9 @@
           "thumbnail": "https://i.ytimg.com/vi/MfHWFN2TAvQ/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 60,
-          "view_count": 9577290,
-          "like_count": 240824,
-          "score": 0.8962
+          "view_count": 9590223,
+          "like_count": 241090,
+          "score": 0.8884
         },
         {
           "video_id": "84YF4HdR39k",
@@ -404,9 +404,9 @@
           "thumbnail": "https://i.ytimg.com/vi/84YF4HdR39k/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 11,
-          "view_count": 10053111,
-          "like_count": 36466,
-          "score": 0.8287
+          "view_count": 10054736,
+          "like_count": 36473,
+          "score": 0.8213
         },
         {
           "video_id": "Y3ndPlJKPzQ",
@@ -416,9 +416,9 @@
           "thumbnail": "https://i.ytimg.com/vi/Y3ndPlJKPzQ/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 60,
-          "view_count": 7171302,
-          "like_count": 68631,
-          "score": 0.7941
+          "view_count": 7179036,
+          "like_count": 68693,
+          "score": 0.7821
         },
         {
           "video_id": "yE4U2M21s00",
@@ -428,9 +428,9 @@
           "thumbnail": "https://i.ytimg.com/vi/yE4U2M21s00/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 26,
-          "view_count": 5420859,
-          "like_count": 118040,
-          "score": 0.7661
+          "view_count": 5427274,
+          "like_count": 118232,
+          "score": 0.7503
         },
         {
           "video_id": "YDrK13toft0",
@@ -440,9 +440,9 @@
           "thumbnail": "https://i.ytimg.com/vi/YDrK13toft0/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 10,
-          "view_count": 5531951,
-          "like_count": 54955,
-          "score": 0.7389
+          "view_count": 5539680,
+          "like_count": 55028,
+          "score": 0.7234
         },
         {
           "video_id": "TzmOi6L1zc0",
@@ -452,9 +452,9 @@
           "thumbnail": "https://i.ytimg.com/vi/TzmOi6L1zc0/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 32,
-          "view_count": 5576589,
-          "like_count": 38739,
-          "score": 0.7262
+          "view_count": 5598765,
+          "like_count": 38785,
+          "score": 0.7113
         },
         {
           "video_id": "qksMH8D61Jc",
@@ -464,9 +464,9 @@
           "thumbnail": "https://i.ytimg.com/vi/qksMH8D61Jc/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 16,
-          "view_count": 6001755,
-          "like_count": 24161,
-          "score": 0.7202
+          "view_count": 6009301,
+          "like_count": 24165,
+          "score": 0.7058
         },
         {
           "video_id": "Csw27olJjyE",
@@ -476,9 +476,9 @@
           "thumbnail": "https://i.ytimg.com/vi/Csw27olJjyE/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 16,
-          "view_count": 5785454,
-          "like_count": 28059,
-          "score": 0.7197
+          "view_count": 5789509,
+          "like_count": 28074,
+          "score": 0.7047
         },
         {
           "video_id": "o89vn3uChSw",
@@ -488,9 +488,9 @@
           "thumbnail": "https://i.ytimg.com/vi/o89vn3uChSw/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 58,
-          "view_count": 3773873,
-          "like_count": 107857,
-          "score": 0.6979
+          "view_count": 3798169,
+          "like_count": 108751,
+          "score": 0.6783
         }
       ],
       "JP": [
@@ -502,9 +502,9 @@
           "thumbnail": "https://i.ytimg.com/vi/uerHl2tgQNc/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 11,
-          "view_count": 17136698,
-          "like_count": 54676,
-          "score": 0.9372
+          "view_count": 17148843,
+          "like_count": 54680,
+          "score": 0.9371
         },
         {
           "video_id": "MfHWFN2TAvQ",
@@ -514,21 +514,9 @@
           "thumbnail": "https://i.ytimg.com/vi/MfHWFN2TAvQ/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 60,
-          "view_count": 9577290,
-          "like_count": 240874,
-          "score": 0.9077
-        },
-        {
-          "video_id": "1nyqZU0rVe0",
-          "title": "Acting like the spider wasn’t glowing blue💀#spiderman #shorts #shortsfeed #trending #viral",
-          "channel": "Girlie vibes feed",
-          "published_at": "2026-08-25T01:30:27Z",
-          "thumbnail": "https://i.ytimg.com/vi/1nyqZU0rVe0/hqdefault.jpg",
-          "category": "viral",
-          "duration_sec": 15,
-          "view_count": 6632281,
-          "like_count": 262103,
-          "score": 0.8549
+          "view_count": 9590230,
+          "like_count": 241159,
+          "score": 0.893
         },
         {
           "video_id": "ySfpaNBP2EE",
@@ -538,9 +526,21 @@
           "thumbnail": "https://i.ytimg.com/vi/ySfpaNBP2EE/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 15,
-          "view_count": 10135580,
-          "like_count": 43302,
-          "score": 0.8476
+          "view_count": 10152013,
+          "like_count": 43361,
+          "score": 0.8344
+        },
+        {
+          "video_id": "1nyqZU0rVe0",
+          "title": "Acting like the spider wasn’t glowing blue💀#spiderman #shorts #shortsfeed #trending #viral",
+          "channel": "Girlie vibes feed",
+          "published_at": "2026-08-25T01:30:27Z",
+          "thumbnail": "https://i.ytimg.com/vi/1nyqZU0rVe0/hqdefault.jpg",
+          "category": "viral",
+          "duration_sec": 15,
+          "view_count": 6644780,
+          "like_count": 262498,
+          "score": 0.8311
         },
         {
           "video_id": "84YF4HdR39k",
@@ -550,9 +550,9 @@
           "thumbnail": "https://i.ytimg.com/vi/84YF4HdR39k/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 11,
-          "view_count": 10053111,
-          "like_count": 36467,
-          "score": 0.8394
+          "view_count": 10054736,
+          "like_count": 36474,
+          "score": 0.8258
         },
         {
           "video_id": "Y3ndPlJKPzQ",
@@ -562,9 +562,9 @@
           "thumbnail": "https://i.ytimg.com/vi/Y3ndPlJKPzQ/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 60,
-          "view_count": 7171302,
-          "like_count": 68639,
-          "score": 0.8132
+          "view_count": 7179036,
+          "like_count": 68703,
+          "score": 0.7911
         },
         {
           "video_id": "4txWO0YU7W0",
@@ -574,9 +574,9 @@
           "thumbnail": "https://i.ytimg.com/vi/4txWO0YU7W0/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 20,
-          "view_count": 6972765,
-          "like_count": 57958,
-          "score": 0.8021
+          "view_count": 7022122,
+          "like_count": 58288,
+          "score": 0.7806
         },
         {
           "video_id": "yE4U2M21s00",
@@ -586,9 +586,9 @@
           "thumbnail": "https://i.ytimg.com/vi/yE4U2M21s00/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 26,
-          "view_count": 5420859,
-          "like_count": 118068,
-          "score": 0.7921
+          "view_count": 5409286,
+          "like_count": 118274,
+          "score": 0.7625
         },
         {
           "video_id": "YDrK13toft0",
@@ -598,21 +598,21 @@
           "thumbnail": "https://i.ytimg.com/vi/YDrK13toft0/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 10,
-          "view_count": 5531951,
-          "like_count": 54974,
-          "score": 0.7646
+          "view_count": 5539680,
+          "like_count": 55045,
+          "score": 0.7361
         },
         {
-          "video_id": "qksMH8D61Jc",
-          "title": "Cemong Nggak Mau Diajak Main, Takut Emaknya Galak! #shortvideo #shorts #snake",
-          "channel": "Sahrul Endut",
-          "published_at": "2026-08-25T05:00:07Z",
-          "thumbnail": "https://i.ytimg.com/vi/qksMH8D61Jc/hqdefault.jpg",
+          "video_id": "TzmOi6L1zc0",
+          "title": "Mom Made Grape 🍇 Jelly for Sotu! 😋 #shorts #shortsfeed",
+          "channel": "Gareeb Shorts Fun",
+          "published_at": "2026-08-25T14:21:42Z",
+          "thumbnail": "https://i.ytimg.com/vi/TzmOi6L1zc0/hqdefault.jpg",
           "category": "viral",
-          "duration_sec": 16,
-          "view_count": 6004836,
-          "like_count": 24163,
-          "score": 0.7442
+          "duration_sec": 32,
+          "view_count": 5604794,
+          "like_count": 38794,
+          "score": 0.7241
         }
       ],
       "HK_TW": [
@@ -624,9 +624,9 @@
           "thumbnail": "https://i.ytimg.com/vi/uerHl2tgQNc/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 11,
-          "view_count": 17136780,
-          "like_count": 54677,
-          "score": 0.9372
+          "view_count": 17148856,
+          "like_count": 54681,
+          "score": 0.9371
         },
         {
           "video_id": "MfHWFN2TAvQ",
@@ -636,9 +636,9 @@
           "thumbnail": "https://i.ytimg.com/vi/MfHWFN2TAvQ/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 60,
-          "view_count": 9577468,
-          "like_count": 240923,
-          "score": 0.9002
+          "view_count": 9594275,
+          "like_count": 241225,
+          "score": 0.9078
         },
         {
           "video_id": "OyWgcT6fL80",
@@ -648,9 +648,9 @@
           "thumbnail": "https://i.ytimg.com/vi/OyWgcT6fL80/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 60,
-          "view_count": 12325764,
-          "like_count": 83579,
-          "score": 0.8996
+          "view_count": 12363487,
+          "like_count": 83731,
+          "score": 0.9042
         },
         {
           "video_id": "1nyqZU0rVe0",
@@ -660,9 +660,9 @@
           "thumbnail": "https://i.ytimg.com/vi/1nyqZU0rVe0/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 15,
-          "view_count": 6639054,
-          "like_count": 262179,
-          "score": 0.8428
+          "view_count": 6644905,
+          "like_count": 262569,
+          "score": 0.8551
         },
         {
           "video_id": "ySfpaNBP2EE",
@@ -672,9 +672,9 @@
           "thumbnail": "https://i.ytimg.com/vi/ySfpaNBP2EE/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 15,
-          "view_count": 10147694,
-          "like_count": 43314,
-          "score": 0.841
+          "view_count": 10155959,
+          "like_count": 43374,
+          "score": 0.8478
         },
         {
           "video_id": "EIfap5GxHKo",
@@ -684,9 +684,9 @@
           "thumbnail": "https://i.ytimg.com/vi/EIfap5GxHKo/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 11,
-          "view_count": 8800977,
-          "like_count": 71545,
-          "score": 0.8375
+          "view_count": 8805952,
+          "like_count": 71595,
+          "score": 0.8461
         },
         {
           "video_id": "84YF4HdR39k",
@@ -696,9 +696,9 @@
           "thumbnail": "https://i.ytimg.com/vi/84YF4HdR39k/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 11,
-          "view_count": 10053111,
-          "like_count": 36467,
-          "score": 0.8325
+          "view_count": 10055215,
+          "like_count": 36479,
+          "score": 0.8393
         },
         {
           "video_id": "XHRTQbOUyTI",
@@ -708,9 +708,9 @@
           "thumbnail": "https://i.ytimg.com/vi/XHRTQbOUyTI/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 30,
-          "view_count": 8620427,
-          "like_count": 54628,
-          "score": 0.8232
+          "view_count": 8634074,
+          "like_count": 54803,
+          "score": 0.8323
         },
         {
           "video_id": "Y3ndPlJKPzQ",
@@ -720,9 +720,9 @@
           "thumbnail": "https://i.ytimg.com/vi/Y3ndPlJKPzQ/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 60,
-          "view_count": 7171411,
-          "like_count": 68655,
-          "score": 0.8019
+          "view_count": 7181427,
+          "like_count": 68715,
+          "score": 0.8132
         },
         {
           "video_id": "4txWO0YU7W0",
@@ -732,9 +732,9 @@
           "thumbnail": "https://i.ytimg.com/vi/4txWO0YU7W0/hqdefault.jpg",
           "category": "viral",
           "duration_sec": 20,
-          "view_count": 7000736,
-          "like_count": 58006,
-          "score": 0.7911
+          "view_count": 7022570,
+          "like_count": 58356,
+          "score": 0.8033
         }
       ]
     }
