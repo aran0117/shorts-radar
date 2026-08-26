@@ -1,0 +1,33 @@
+{
+  "dates": [
+    "2026-08-27"
+  ],
+  "categories": [
+    {
+      "key": "film",
+      "label": "🎬 영화"
+    },
+    {
+      "key": "show",
+      "label": "🎤 예능"
+    },
+    {
+      "key": "viral",
+      "label": "🔥 화제/이슈"
+    }
+  ],
+  "groups": [
+    {
+      "key": "US",
+      "label": "🇺🇸 미국"
+    },
+    {
+      "key": "JP",
+      "label": "🇯🇵 일본"
+    },
+    {
+      "key": "HK_TW",
+      "label": "🇭🇰🇹🇼 홍콩·대만"
+    }
+  ]
+}
